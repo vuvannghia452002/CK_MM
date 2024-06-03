@@ -20,6 +20,7 @@
 <!-- - Phát biểu bài toán - nêu rõ input và output -->
 
 Phát biểu bài toán
+
 INPUT:
 (n, e): (Khóa công khai)
 c: (Bản mã)
@@ -30,16 +31,8 @@ x: (Phần bí bật trong bản rõ)
 
 <!-- - Số mũ mã hóa cần giới hạn trong khoảng nào là nhỏ -->
 
-
-
-
 <!-- - Định nghĩa thời gian đa thức là như thế nào -->
-
-
 
 Định nghĩa thời gian đa thức
 
-
-
-
-
+![alt text](image.png)
