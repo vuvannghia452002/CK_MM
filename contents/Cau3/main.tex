@@ -33,7 +33,7 @@
 
 
 \section{Định nghĩa thời gian đa thức}
- 
+
 
 
 
@@ -41,11 +41,11 @@
 Theo sách
 
 @book{silverman2008introduction,
-  title={An introduction to mathematical cryptography},
-  author={Silverman, Joseph H and Pipher, Jill and Hoffstein, Jeffrey},
-  volume={1},
-  year={2008},
-  publisher={Springer}
+    title={An introduction to mathematical cryptography},
+    author={Silverman, Joseph H and Pipher, Jill and Hoffstein, Jeffrey},
+    volume={1},
+    year={2008},
+    publisher={Springer}
 }
 
 
@@ -61,8 +61,25 @@ Giả sử rằng có một hằng số \( A \geq 0 \), không phụ thuộc và
 
 
 \section{Tại sao LLL lại chạy trong thời gian đa thức}
+
+Theo sách
+
+
+@misc{polach2022lattice,
+  title={Lattice Basis Reduction Using LLL Algorithm with Application to Algorithmic Lattice Problems},
+  author={Pol{\'a}ch, Juraj},
+  year={2022}
+}
+
+
+
+
+
+
+
+
+
 Ta có  bổ đề  giới hạn độ dài cơ sở LLL:
-% Trong LLL đã có 
 % Trong LLL đã có 
 % Trong LLL đã có 
 % Trong LLL đã có 
@@ -72,41 +89,32 @@ Ta có  bổ đề  giới hạn độ dài cơ sở LLL:
 Giả sử rằng chúng ta có một cơ sở \( v_1, v_2, \ldots, v_n \in \mathbb{R}^m \) cho một lưới \( L \) là LLL giảm, thì bất đẳng thức sau đây đúng:
 \[ \|v_1\|^2 \leq 2^{n-1} \|x\|^2 \]
 đối với mọi \( x \in L \) với \( x \neq 0 \).
+% Trong LLL đã có 
+% Trong LLL đã có 
+% Trong LLL đã có 
+% Trong LLL đã có 
+% Trong LLL đã có 
+% Trong LLL đã có 
+% Trong LLL đã có 
 
-
-
-
-Bổ đề này thực chất nói rằng độ dài của \( v_1 \), vector đầu tiên của cơ sở LLL giảm, nhiều nhất là \( 2^{(n-1)/2} \) lần độ dài của bất kỳ vector nào không bằng không trong lưới \( L \). Điều này bao gồm cả vector ngắn nhất trong lưới.
-
-\section*{Khái quát với Điều kiện Lovász}
-
-Điều kiện Lovász cho giảm LLL thường liên quan đến một tham số \( \delta \) (thường được chọn là \( 3/4 \)). Khi xem xét dạng tổng quát với \( \delta \), chúng ta có:
-\[ \|v_1\| \leq \left( \frac{4}{4\delta - 1} \right)^{(n-1)/2} \lambda(L), \]
-trong đó \( \lambda(L) \) biểu thị độ dài của vector ngắn nhất trong lưới \( L \).
-
-\section*{Lựa chọn Cụ thể của \( \delta \)}
-
-Để đảm bảo thời gian tính toán đa thức của thuật toán LLL, chúng ta sử dụng:
-\[ \delta = \frac{1}{4} + \frac{3}{4}\frac{n}{n-1}. \]
-
-Với lựa chọn \( \delta \) này, chúng ta có:
-\[ \|v_1\| \leq \left( \frac{2}{\sqrt{3}} \right)^n \lambda(L). \]
-
-Lựa chọn cụ thể này của \( \delta \) đơn giản hóa giới hạn và cung cấp một hàm xấp xỉ rõ ràng \( \psi(n) = \left( \frac{2}{\sqrt{3}} \right)^n \).
-
-\section*{Ý nghĩa}
-
-Mặc dù \( \psi(n) \) là hàm số mũ theo hạng của lưới \( n \), kết quả này vẫn là một thành tựu quan trọng. Giới hạn này không phụ thuộc vào kích thước đầu vào, làm cho nó trở thành một kết quả cơ bản trong nghiên cứu về lưới và cho các thuật toán như thuật toán LLL. Thuật toán LLL là thuật toán đầu tiên cho phép giải quyết chính xác Bài Toán Vector Ngắn Nhất (SVP) trong các kích thước cố định, đại diện cho một bước tiến lớn trong lý thuyết lưới và toán học tính toán.
-
-\section*{Tóm tắt}
-
-- **Bổ đề 4.2**: Cung cấp một giới hạn trên độ dài của vector đầu tiên của cơ sở LLL giảm.
-- **Dạng tổng quát**: \( \|v_1\| \leq \left( \frac{4}{4\delta - 1} \right)^{(n-1)/2} \lambda(L) \).
-- **Lựa chọn cụ thể của \( \delta \)**: Chọn \( \delta = \frac{1}{4} + \frac{3}{4}\frac{n}{n-1} \) cho \( \|v_1\| \leq \left( \frac{2}{\sqrt{3}} \right)^n \lambda(L) \).
-- **Hàm xấp xỉ**: \( \psi(n) = \left( \frac{2}{\sqrt{3}} \right)^n \).
-
-Bổ đề này và các ý nghĩa của nó làm nổi bật hiệu quả của thuật toán LLL trong việc xấp xỉ vector ngắn nhất trong lưới và thời gian tính toán đa thức dưới các điều kiện cụ thể.
  
+
+Bổ đề nói rằng độ dài của $v_1$, vectơ đầu tiên của cơ sở được rút gọn bởi thuật toán LLL, không vượt quá $2^{\frac{n-1}{2}}$ lần độ dài của bất kỳ vectơ $x \in L$, bao gồm cả vectơ ngắn nhất. 
+
+
+
+Chúng ta có thể thay thế hằng số trong (Điều kiện Lovász 4) bằng $\delta$ để có được kết quả tổng quát hơn:
+\[
+    \|v_1\| \leq \frac{4}{4\delta-1} \cdot 2^{\frac{n-1}{2}} \lambda(L)
+\]
+Người ta cũng thường làm việc với $\delta = \frac{1}{4} + \frac{3}{4}\frac{n}{n-1}$ để đảm bảo $\delta < 1$ và đảm bảo thời gian chạy đa thức của thuật toán LLL. Khi đó, chúng ta có phiên bản đơn giản hơn:
+\[
+    \|v_1\| \leq \frac{2}{\sqrt{3}} \cdot n \lambda(L)
+\]
+Điều này dẫn đến hàm xấp xỉ $\psi(n) = \frac{2}{\sqrt{3}} \cdot n$. Mặc dù là cấp số nhân trong thứ hạng của mạng, nhưng kết quả này vẫn là một thành tựu vì hàm gần đúng không phụ thuộc vào kích thước đầu vào và thuật toán LLL lần đầu tiên cho phép giải quyết SVP chính xác theo chiều cố định
+
+
+
 
 
 
@@ -133,8 +141,4 @@ Bổ đề này và các ý nghĩa của nó làm nổi bật hiệu quả của
 
 
 
- 
-% https://chatgpt.com/c/00a6fa58-6d59-4a9a-bb34-0615a4b3e4ce -->
 
- 
-  
