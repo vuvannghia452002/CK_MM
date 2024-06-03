@@ -29,4 +29,17 @@ OUTPUT:
 x: (Phần bí bật trong bản rõ)
 
 <!-- - Số mũ mã hóa cần giới hạn trong khoảng nào là nhỏ -->
+
+
+
+
 <!-- - Định nghĩa thời gian đa thức là như thế nào -->
+
+
+
+Định nghĩa thời gian đa thức
+
+
+
+
+
