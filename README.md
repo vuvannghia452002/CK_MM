@@ -4,34 +4,7 @@ Bổ sung phần định nghĩa thời gian đa thức,
 
 
 
-
-
-
-Nghĩa bổ sung
-Nghĩa bổ sung
-Nghĩa bổ sung
-Nghĩa bổ sung
-Nghĩa bổ sung
-Nghĩa bổ sung
-Nghĩa bổ sung
-Nghĩa bổ sung
-Nghĩa bổ sung
-
-
-
-Phát biểu bài toán
-
-INPUT:
-(n, e): (Khóa công khai)
-c: (Bản mã)
-t: (Phần văn bản cố định trong bản rõ)
-y: (Giới hạn của phần bí mật trong bản rõ)
-OUTPUT:
-x: (Phần bí bật trong bản rõ)
-
-<!-- - Số mũ mã hóa cần giới hạn trong khoảng nào là nhỏ -->
-
-https://www.youtube.com/watch?v=vxS0DZE_Lvs&t=1s
+ 
 <!-- - Định nghĩa thời gian đa thức là như thế nào -->
 
 Định nghĩa thời gian đa thức
